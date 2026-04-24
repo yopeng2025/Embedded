@@ -23,7 +23,7 @@ int main(void)
 
 /*
 CPU frequency: 
-16MHz (MegaHertz) == 16,000,000 clock cycle / 1s
+16MHz (MillionHertz) == 16,000,000 clock cycle / 1s
                       8,000,000 clock cycle / 0.5s
 
 my_timer == 11 clock cycle 

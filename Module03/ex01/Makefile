@@ -1,17 +1,16 @@
 MCU = atmega328p
-F_CPU = 16000000UL #16MHz (MillionHertz)
+F_CPU = 16000000UL #16MHz (Million Hertz)
+UART_BAUDRATE = 115200 #communication speed: system transmits 115,200 bits of data per second
 
 CC = avr-gcc
-CFLAGS = -Wall -Wextra -Werror -Wundef -mmcu=$(MCU) -DF_CPU=$(F_CPU) -O2
+CFLAGS = -Wall -Wextra -Werror -Wundef -mmcu=$(MCU) \
+		 -DF_CPU=$(F_CPU) -DUART_BAUDRATE=$(UART_BAUDRATE) -O2
 
 OBJCOPY = avr-objcopy
 AVRDUDE = avrdude
 PORT = /dev/ttyUSB0
 
 all: hex flash
-
-ASM:
-	$(CC) $(CFLAGS) -S main.c -o main.s
 
 hex:
 	$(CC) $(CFLAGS) main.c -o main.bin

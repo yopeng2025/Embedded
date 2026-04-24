@@ -20,7 +20,7 @@ int main(void)
 
     while (1)
     {
-       if (!(PIND & (1 << PD2)))
+       if (!(PIND & (1 << PD2)))                 //SW1
        {
             _delay_ms(100);
             if (!(PIND & (1 << PD2)))
@@ -35,7 +35,7 @@ int main(void)
             }
        }
 
-       if (!(PIND & ( 1 << PD4)))
+       if (!(PIND & ( 1 << PD4)))                //SW2
        {
             _delay_ms(100);
             if (!(PIND & (1 << PD4)))

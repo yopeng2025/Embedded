@@ -1,6 +1,6 @@
 # avr mcu（Microcontroller Unit）
 MCU = atmega328p
-# mcu clock frequency: 16MHz (Megahertz)(UL:Unsigned Long)
+# mcu clock frequency: 16MHz (Millionhertz)(UL:Unsigned Long)
 F_CPU = 16000000UL
 
 CC = avr-gcc

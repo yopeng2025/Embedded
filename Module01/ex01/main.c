@@ -8,18 +8,18 @@ int main(void)
 
     //Timer/Counter1 Control Register A: decide what to do with timer
     //COM1A0: Compare Output Mode                                
-    //p.140, Table 16-1
+    //DS40002061B p.140, Table 16-1
     //Toggle OC1A（=PB1=D2）
     TCCR1A |= (1 << COM1A0);
     
     //Timer/Counter1 Control Register B
-    //p.141, Table 16-4
-    //CTC: Clear Timer on Compare Match (p.132 Table 16-6)
+    //DS40002061B p.141, Table 16-4
+    //CTC: Clear Timer on Compare Match (DS40002061B p.132 Table 16-6)
     //The timer will reset to 0 once it matches OCR1A
     TCCR1B |= (1 << WGM12);
 
     //Prescaler: Speed Adjuster (slow down F_CPU)
-    //p.143 Table 16-5
+    //DS40002061B p.143 Table 16-5
     //change prescaler -> 256 clock cycle
     TCCR1B |= (1 << CS12);
 
