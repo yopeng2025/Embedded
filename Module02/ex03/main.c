@@ -29,9 +29,8 @@ ISR(USART_RX_vect)
 
 int     main(void)
 {
-    uart_init();
-    sei();          //set enable interruption p.20
-    //SREG |= (1 << 7);
+    uart_init();    
+    SREG |= (1 << 7);       //set enable interruption p.20
     while(1){}
     return 0;
 }

@@ -1,7 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-
 //increments a value each time you press button SW1
 //decrements a value each time you press button SW2
 

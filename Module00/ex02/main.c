@@ -27,7 +27,7 @@ PB0 == 0
 PD2 == 2 defined in header<>
 
 ~  : Bitwise NOT operator (~1 = 0)
-&= : Bitwise AND operator (1&1=1 1&0=0)
+&= : Bitwise AND operator (1&1=1 1&0=0 0&0=0)
 
 PIN_X == Port Input Number X: Read the actual logic levels
 
